@@ -1418,3 +1418,6 @@ Invoking: Cross G++ Linker
 g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
 Finished building target: Mapping
  
+13:16:40 **** Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
