@@ -1,0 +1,77 @@
+/*
+ * Map.cpp
+ *
+ *  Created on: Nov 20, 2015
+ *      Author: colman
+ */
+
+#include "Map.h"
+#include "lodepng.h"
+#include "iostream"
+
+using namespace lodepng;
+
+Map::Map() {
+	// TODO Auto-generated constructor stub
+
+}
+
+void Map::loadMapFromFile(const char* filePath)
+{
+	decode(image,mapWidth,mapHeight,filePath);
+	cout<<"Map size: "<<mapWidth<<", "<<mapHeight<<endl;
+
+	this->loadMap(filePath);
+}
+void Map::converImageToGrid()
+{
+	map.resize(mapHeight);
+	for(int i=0;i<mapHeight;i++)
+	{
+		map[i].resize(mapWidth);
+	}
+
+}
+
+void Map::loadMap(const char* filePath)
+{
+	converImageToGrid();
+	unsigned int j=0;
+	unsigned int k=0;
+	for (vector<unsigned char>::const_iterator i = image.begin(); i != image.end(); i+=4)
+	{
+		/*std::cout << (int)*i << ' '<<endl;*/
+
+		if(j == mapWidth)
+		{
+			j = 0;
+			k++;
+		}
+		if((int)*i == 255)
+		{
+			map[j][k] = false;
+
+		}
+		else
+		{
+			map[j][k] = true;
+			cout<<"maor"<<endl;
+		}
+		j++;
+
+	}
+	cout<<map[0][0]<<endl;
+
+
+}
+
+void Map::printMap() const
+{
+
+
+}
+
+Map::~Map() {
+	// TODO Auto-generated destructor stub
+}
+

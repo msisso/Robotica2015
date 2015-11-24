@@ -1,0 +1,1420 @@
+03:41:58 **** Clean-only build of configuration Debug for project HelloRobot ****
+make clean 
+rm -rf  ./main.o  ./main.d  HelloRobot
+ 
+03:41:58 **** Build of configuration Debug for project HelloRobot ****
+make all 
+Building file: ../main.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/local/include/player-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+In file included from ../main.cpp:9:0:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h: In member function ‘void PlayerCc::Position2dProxy::GoTo(double, double, double)’:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aX’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aY’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aYaw’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h: In member function ‘void PlayerCc::Position3dProxy::GoTo(double, double, double, double, double, double)’:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aX’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aY’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aZ’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aRoll’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aPitch’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aYaw’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+Finished building: ../main.cpp
+ 
+Building target: HelloRobot
+Invoking: Cross G++ Linker
+g++ -L/usr/local/lib -o "HelloRobot"  ./main.o   -lplayerc++
+Finished building target: HelloRobot
+ 
+03:41:59 **** Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building file: ../lodepng.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lodepng.d" -MT"lodepng.d" -o "lodepng.o" "../lodepng.cpp"
+Finished building: ../lodepng.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Map.o ./lodepng.o   
+/usr/lib/gcc/i686-linux-gnu/4.7/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Mapping] Error 1
+03:42:46 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:42:46 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Map.o ./lodepng.o   
+/usr/lib/gcc/i686-linux-gnu/4.7/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Mapping] Error 1
+03:49:00 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:49:00 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp:13:17: error: ‘iostream’ is not a namespace-name
+../Map.cpp:13:25: error: expected namespace-name before ‘;’ token
+make: *** [Map.o] Error 1
+03:49:12 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:49:12 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Map.o ./lodepng.o   
+/usr/lib/gcc/i686-linux-gnu/4.7/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Mapping] Error 1
+03:51:18 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:51:18 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+../Main.cpp: In function ‘int main()’:
+../Main.cpp:14:18: error: conversion from ‘Map*’ to non-scalar type ‘Map’ requested
+make: *** [Main.o] Error 1
+03:52:07 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:52:07 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+../Main.cpp: In function ‘int main()’:
+../Main.cpp:14:18: error: conversion from ‘Map*’ to non-scalar type ‘Map’ requested
+make: *** [Main.o] Error 1
+03:52:13 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:52:13 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+../Main.cpp: In function ‘int main()’:
+../Main.cpp:14:18: error: conversion from ‘Map*’ to non-scalar type ‘Map’ requested
+make: *** [Main.o] Error 1
+03:52:15 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:52:15 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+../Main.cpp: In function ‘int main()’:
+../Main.cpp:14:18: error: conversion from ‘Map*’ to non-scalar type ‘Map’ requested
+make: *** [Main.o] Error 1
+03:53:09 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:53:10 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+../Main.cpp: In function ‘int main()’:
+../Main.cpp:16:14: error: no match for ‘operator=’ in ‘m = (operator new(36u), (<statement>, ((Map*)<anonymous>)))’
+../Main.cpp:16:14: note: candidate is:
+In file included from ../Main.cpp:8:0:
+../Map.h:14:7: note: Map& Map::operator=(const Map&)
+../Map.h:14:7: note:   no known conversion for argument 1 from ‘Map*’ to ‘const Map&’
+make: *** [Main.o] Error 1
+03:54:30 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:54:30 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+Finished building: ../Main.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+03:54:34 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+03:54:50 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+03:58:16 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+03:58:16 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+Finished building: ../Main.cpp
+ 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:02:18 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:03:34 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::loadMap(const char*)’:
+../Map.cpp:30:23: error: no match for ‘operator<<’ in ‘std::cout << ((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’
+../Map.cpp:30:23: note: candidates are:
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:106:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:106:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.7/ostream:115:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+/usr/include/c++/4.7/ostream:115:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.7/ostream:125:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:125:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.7/ostream:164:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:164:7: note:   no known conversion for argument 1 from ‘void’ to ‘long int’
+/usr/include/c++/4.7/ostream:168:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:168:7: note:   no known conversion for argument 1 from ‘void’ to ‘long unsigned int’
+/usr/include/c++/4.7/ostream:172:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:172:7: note:   no known conversion for argument 1 from ‘void’ to ‘bool’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note:   no known conversion for argument 1 from ‘void’ to ‘short int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:179:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:179:7: note:   no known conversion for argument 1 from ‘void’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note:   no known conversion for argument 1 from ‘void’ to ‘int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:190:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:190:7: note:   no known conversion for argument 1 from ‘void’ to ‘unsigned int’
+/usr/include/c++/4.7/ostream:199:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:199:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long int’
+/usr/include/c++/4.7/ostream:203:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:203:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long unsigned int’
+/usr/include/c++/4.7/ostream:218:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:218:7: note:   no known conversion for argument 1 from ‘void’ to ‘double’
+/usr/include/c++/4.7/ostream:222:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:222:7: note:   no known conversion for argument 1 from ‘void’ to ‘float’
+/usr/include/c++/4.7/ostream:230:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:230:7: note:   no known conversion for argument 1 from ‘void’ to ‘long double’
+/usr/include/c++/4.7/ostream:243:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:243:7: note:   no known conversion for argument 1 from ‘void’ to ‘const void*’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/4.7/string:54:0,
+                 from ../lodepng.h:33,
+                 from ../Map.cpp:9:
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘void’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:469:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+/usr/include/c++/4.7/ostream:469:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘void’)
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:474:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+/usr/include/c++/4.7/ostream:474:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:480:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+/usr/include/c++/4.7/ostream:480:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:486:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+/usr/include/c++/4.7/ostream:486:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘signed char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:491:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+/usr/include/c++/4.7/ostream:491:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘unsigned char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:511:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+/usr/include/c++/4.7/ostream:511:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   mismatched types ‘const _CharT*’ and ‘void’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+/usr/include/c++/4.7/ostream:528:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:541:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+/usr/include/c++/4.7/ostream:541:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘const signed char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:546:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+/usr/include/c++/4.7/ostream:546:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:23: note:   cannot convert ‘((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::pop_back<unsigned char, std::allocator<unsigned char> >()’ (type ‘void’) to type ‘const unsigned char*’
+make: *** [Map.o] Error 1
+04:05:43 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:05:43 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp:30:2: error: stray ‘@’ in program
+In file included from /usr/include/c++/4.7/vector:65:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_vector.h: In member function ‘void Map::loadMap(const char*)’:
+/usr/include/c++/4.7/bits/stl_vector.h:165:20: error: ‘std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_impl’ is inaccessible
+../Map.cpp:30:17: error: within this context
+../Map.cpp:30:35: error: expected ‘;’ before ‘image’
+make: *** [Map.o] Error 1
+04:06:16 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:06:17 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+In file included from /usr/include/c++/4.7/vector:65:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_vector.h: In member function ‘void Map::loadMap(const char*)’:
+/usr/include/c++/4.7/bits/stl_vector.h:165:20: error: ‘std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_impl std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_impl’ is inaccessible
+../Map.cpp:30:16: error: within this context
+make: *** [Map.o] Error 1
+04:07:36 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:07:36 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:07:41 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:08:45 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:08:46 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::loadMap(const char*)’:
+../Map.cpp:30:57: error: conversion from ‘std::vector<unsigned char>::iterator {aka __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char> >}’ to non-scalar type ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ requested
+../Map.cpp:30:75: error: no match for ‘operator!=’ in ‘i != ((Map*)this)->Map::image.std::vector<_Tp, _Alloc>::end<unsigned char, std::allocator<unsigned char> >()’
+../Map.cpp:30:75: note: candidates are:
+In file included from /usr/include/c++/4.7/bits/stl_algobase.h:65:0,
+                 from /usr/include/c++/4.7/vector:61,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_pair.h:219:5: note: template<class _T1, class _T2> bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+/usr/include/c++/4.7/bits/stl_pair.h:219:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::pair<_T1, _T2>’
+In file included from /usr/include/c++/4.7/bits/stl_algobase.h:68:0,
+                 from /usr/include/c++/4.7/vector:61,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_iterator.h:305:5: note: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+/usr/include/c++/4.7/bits/stl_iterator.h:305:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+In file included from /usr/include/c++/4.7/bits/stl_algobase.h:68:0,
+                 from /usr/include/c++/4.7/vector:61,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_iterator.h:355:5: note: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+/usr/include/c++/4.7/bits/stl_iterator.h:355:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+In file included from /usr/include/c++/4.7/vector:62:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/allocator.h:129:5: note: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_T2>&)
+/usr/include/c++/4.7/bits/allocator.h:129:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::allocator<_Tp1>’
+In file included from /usr/include/c++/4.7/vector:62:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/allocator.h:134:5: note: template<class _Tp> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+/usr/include/c++/4.7/bits/allocator.h:134:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::allocator<_Tp1>’
+In file included from /usr/include/c++/4.7/vector:65:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_vector.h:1394:5: note: template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+/usr/include/c++/4.7/bits/stl_vector.h:1394:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+In file included from /usr/include/c++/4.7/bits/char_traits.h:42:0,
+                 from /usr/include/c++/4.7/string:42,
+                 from ../lodepng.h:33,
+                 from ../Map.cpp:9:
+/usr/include/c++/4.7/bits/postypes.h:223:5: note: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+/usr/include/c++/4.7/bits/postypes.h:223:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::fpos<_StateT>’
+In file included from /usr/include/c++/4.7/string:54:0,
+                 from ../lodepng.h:33,
+                 from ../Map.cpp:9:
+/usr/include/c++/4.7/bits/basic_string.h:2529:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+/usr/include/c++/4.7/bits/basic_string.h:2529:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+In file included from /usr/include/c++/4.7/string:54:0,
+                 from ../lodepng.h:33,
+                 from ../Map.cpp:9:
+/usr/include/c++/4.7/bits/basic_string.h:2541:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+/usr/include/c++/4.7/bits/basic_string.h:2541:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   mismatched types ‘const _CharT*’ and ‘__gnu_cxx::__normal_iterator<const char*, std::vector<char> >’
+In file included from /usr/include/c++/4.7/string:54:0,
+                 from ../lodepng.h:33,
+                 from ../Map.cpp:9:
+/usr/include/c++/4.7/bits/basic_string.h:2553:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+/usr/include/c++/4.7/bits/basic_string.h:2553:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+In file included from /usr/include/c++/4.7/bits/locale_facets.h:50:0,
+                 from /usr/include/c++/4.7/bits/basic_ios.h:39,
+                 from /usr/include/c++/4.7/ios:45,
+                 from /usr/include/c++/4.7/ostream:40,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/streambuf_iterator.h:212:5: note: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+/usr/include/c++/4.7/bits/streambuf_iterator.h:212:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+In file included from /usr/include/i386-linux-gnu/c++/4.7/./bits/c++allocator.h:34:0,
+                 from /usr/include/c++/4.7/bits/allocator.h:48,
+                 from /usr/include/c++/4.7/vector:62,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/ext/new_allocator.h:134:5: note: template<class _Tp> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+/usr/include/c++/4.7/ext/new_allocator.h:134:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   ‘std::vector<char>::const_iterator {aka __gnu_cxx::__normal_iterator<const char*, std::vector<char> >}’ is not derived from ‘const __gnu_cxx::new_allocator<_Tp>’
+In file included from /usr/include/c++/4.7/bits/stl_algobase.h:68:0,
+                 from /usr/include/c++/4.7/vector:61,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_iterator.h:825:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+/usr/include/c++/4.7/bits/stl_iterator.h:825:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   deduced conflicting types for parameter ‘_Iterator’ (‘const char*’ and ‘unsigned char*’)
+In file included from /usr/include/c++/4.7/bits/stl_algobase.h:68:0,
+                 from /usr/include/c++/4.7/vector:61,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_iterator.h:819:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+/usr/include/c++/4.7/bits/stl_iterator.h:819:5: note:   template argument deduction/substitution failed:
+../Map.cpp:30:75: note:   deduced conflicting types for parameter ‘_Container’ (‘std::vector<char>’ and ‘std::vector<unsigned char>’)
+make: *** [Map.o] Error 1
+04:09:11 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:09:11 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:09:15 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:14:43 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:14:43 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:14:45 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:18:42 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:18:42 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:18:44 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:18:50 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:26:45 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:26:45 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+Finished building: ../Main.cpp
+ 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp: In member function ‘void Map::loadMap(const char*)’:
+../Map.cpp:43:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:49:13: error: no match for ‘operator=’ in ‘((Map*)this)->Map::map.std::vector<_Tp, _Alloc>::operator[]<std::vector<bool>, std::allocator<std::vector<bool> > >(((std::vector<std::vector<bool> >::size_type)j)) = 0’
+../Map.cpp:49:13: note: candidate is:
+In file included from /usr/include/c++/4.7/vector:66:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note: std::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(const std::vector<bool, _Alloc>&) [with _Alloc = std::allocator<bool>; std::vector<bool, _Alloc> = std::vector<bool>]
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note:   no known conversion for argument 1 from ‘int’ to ‘const std::vector<bool>&’
+../Map.cpp:54:11: error: no match for ‘operator=’ in ‘((Map*)this)->Map::map.std::vector<_Tp, _Alloc>::operator[]<std::vector<bool>, std::allocator<std::vector<bool> > >(((std::vector<std::vector<bool> >::size_type)j)) = 1’
+../Map.cpp:54:11: note: candidate is:
+In file included from /usr/include/c++/4.7/vector:66:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note: std::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(const std::vector<bool, _Alloc>&) [with _Alloc = std::allocator<bool>; std::vector<bool, _Alloc> = std::vector<bool>]
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note:   no known conversion for argument 1 from ‘int’ to ‘const std::vector<bool>&’
+make: *** [Map.o] Error 1
+04:27:10 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:27:11 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp: In member function ‘void Map::loadMap(const char*)’:
+../Map.cpp:49:13: error: no match for ‘operator=’ in ‘((Map*)this)->Map::map.std::vector<_Tp, _Alloc>::operator[]<std::vector<bool>, std::allocator<std::vector<bool> > >(j) = 0’
+../Map.cpp:49:13: note: candidate is:
+In file included from /usr/include/c++/4.7/vector:66:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note: std::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(const std::vector<bool, _Alloc>&) [with _Alloc = std::allocator<bool>; std::vector<bool, _Alloc> = std::vector<bool>]
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note:   no known conversion for argument 1 from ‘int’ to ‘const std::vector<bool>&’
+../Map.cpp:54:11: error: no match for ‘operator=’ in ‘((Map*)this)->Map::map.std::vector<_Tp, _Alloc>::operator[]<std::vector<bool>, std::allocator<std::vector<bool> > >(j) = 1’
+../Map.cpp:54:11: note: candidate is:
+In file included from /usr/include/c++/4.7/vector:66:0,
+                 from ../Map.h:11,
+                 from ../Map.cpp:8:
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note: std::vector<bool, _Alloc>& std::vector<bool, _Alloc>::operator=(const std::vector<bool, _Alloc>&) [with _Alloc = std::allocator<bool>; std::vector<bool, _Alloc> = std::vector<bool>]
+/usr/include/c++/4.7/bits/stl_bvector.h:572:5: note:   no known conversion for argument 1 from ‘int’ to ‘const std::vector<bool>&’
+make: *** [Map.o] Error 1
+04:29:19 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:29:19 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:29:29 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:30:17 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:30:37 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:30:37 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:30:40 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:31:08 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp: In member function ‘void Map::loadMap(const char*)’:
+../Map.cpp:44:9: error: no match for ‘operator<<’ in ‘std::cout << i’
+../Map.cpp:44:9: note: candidates are:
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:106:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:106:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.7/ostream:115:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+/usr/include/c++/4.7/ostream:115:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.7/ostream:125:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:125:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.7/ostream:164:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:164:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘long int’
+/usr/include/c++/4.7/ostream:168:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:168:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘long unsigned int’
+/usr/include/c++/4.7/ostream:172:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:172:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘bool’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:93:5: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘short int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:179:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:179:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:107:5: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘int’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:190:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:190:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘unsigned int’
+/usr/include/c++/4.7/ostream:199:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:199:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘long long int’
+/usr/include/c++/4.7/ostream:203:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:203:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘long long unsigned int’
+/usr/include/c++/4.7/ostream:218:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:218:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘double’
+/usr/include/c++/4.7/ostream:222:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:222:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘float’
+/usr/include/c++/4.7/ostream:230:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:230:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘long double’
+/usr/include/c++/4.7/ostream:243:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+/usr/include/c++/4.7/ostream:243:7: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘const void*’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+/usr/include/c++/4.7/bits/ostream.tcc:121:5: note:   no known conversion for argument 1 from ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/4.7/string:54:0,
+                 from ../lodepng.h:33,
+                 from ../Map.cpp:9:
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+/usr/include/c++/4.7/bits/basic_string.h:2750:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:469:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+/usr/include/c++/4.7/ostream:469:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘__gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >’)
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:474:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+/usr/include/c++/4.7/ostream:474:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:480:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+/usr/include/c++/4.7/ostream:480:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:486:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+/usr/include/c++/4.7/ostream:486:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘signed char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:491:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+/usr/include/c++/4.7/ostream:491:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘unsigned char’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:511:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+/usr/include/c++/4.7/ostream:511:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   mismatched types ‘const _CharT*’ and ‘__gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >’
+In file included from /usr/include/c++/4.7/ostream:607:0,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+/usr/include/c++/4.7/bits/ostream.tcc:323:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+/usr/include/c++/4.7/ostream:528:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘const char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:541:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+/usr/include/c++/4.7/ostream:541:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘const signed char*’
+In file included from /usr/include/c++/4.7/iostream:40:0,
+                 from ../Map.cpp:10:
+/usr/include/c++/4.7/ostream:546:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+/usr/include/c++/4.7/ostream:546:5: note:   template argument deduction/substitution failed:
+../Map.cpp:44:9: note:   cannot convert ‘i’ (type ‘std::vector<unsigned char>::const_iterator {aka __gnu_cxx::__normal_iterator<const unsigned char*, std::vector<unsigned char> >}’) to type ‘const unsigned char*’
+make: *** [Map.o] Error 1
+04:32:03 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:33:39 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:34:08 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:34:58 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:35:16 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:29:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:38:51 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:31:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp: In member function ‘void Map::printMap() const’:
+../Map.cpp:73:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:75:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:38:58 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:38:59 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:39:01 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:39:02 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:39:03 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:39:03 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:39:31 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:39:58 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:39:58 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:31:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:40:01 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:40:26 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:41:29 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:42:49 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:42:49 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:31:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:42:53 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:43:48 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+04:45:26 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+04:45:26 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:31:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+04:45:30 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+08:40:44 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:31:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp: In member function ‘void Map::printMap() const’:
+../Map.cpp:73:11: error: aggregate ‘std::ofstream myRoboticLab’ has incomplete type and cannot be defined
+make: *** [Map.o] Error 1
+08:41:19 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+08:41:19 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:32:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:41:22 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+08:45:27 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::converImageToGrid()’:
+../Map.cpp:32:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:47:18 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+08:47:18 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:49:16 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+08:49:22 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:51:20 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:53:59 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:55:06 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+08:55:06 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+08:55:08 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+08:55:27 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+08:55:39 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+08:55:39 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:55:42 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+08:57:27 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:57:39 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:57:51 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:58:07 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:58:26 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:58:42 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:59:43 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+08:59:58 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:00:00 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+09:00:52 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:01:29 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:01:35 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:02:00 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:02:08 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:02:20 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:02:28 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:02:46 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:03:06 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:03:25 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:03:33 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:03:50 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:04:07 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:04:17 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:04:47 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+09:09:15 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:09:27 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:10:04 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+09:14:49 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+13:10:19 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+Finished building: ../Main.cpp
+ 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In constructor ‘Map::Map()’:
+../Map.cpp:11:9: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+../Map.cpp:11:9: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11 [enabled by default]
+../Map.cpp: In member function ‘void Map::loadMap()’:
+../Map.cpp:38:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:39:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:35:15: warning: unused variable ‘j’ [-Wunused-variable]
+../Map.cpp:36:15: warning: unused variable ‘k’ [-Wunused-variable]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 

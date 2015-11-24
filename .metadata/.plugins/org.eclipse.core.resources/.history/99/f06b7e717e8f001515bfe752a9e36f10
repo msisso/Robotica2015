@@ -1,0 +1,42 @@
+/*
+ * Map.cpp
+ *
+ *  Created on: Nov 20, 2015
+ *      Author: colman
+ */
+
+#include "Map.h"
+#include "lodepng.h"
+#include "iostream"
+
+using namespace lodepng;
+
+Map::Map() {
+	// TODO Auto-generated constructor stub
+
+}
+
+void Map::loadMapFromFile(const char* filePath)
+{
+	decode(image,mapWidth,mapHeight,filePath);
+	cout<<"Map size: "<<mapWidth<<", "<<mapHeight<<endl;
+
+	this->loadMap(filePath);
+}
+
+void Map::loadMap(const char* filePath)
+{
+
+
+}
+
+void Map::printMap() const
+{
+
+
+}
+
+Map::~Map() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,104 @@
+/*
+ * Map.cpp
+ *
+ *  Created on: Nov 20, 2015
+ *      Author: colman
+ */
+
+#include "Map.h"
+#include "lodepng.h"
+#include "iostream"
+#include "fstream"
+
+using namespace lodepng;
+
+Map::Map() {
+	// TODO Auto-generated constructor stub
+
+}
+
+void Map::loadMapFromFile(const char* filePath)
+{
+	decode(image,mapWidth,mapHeight,filePath);
+	cout<<"Map size: "<<mapWidth<<", "<<mapHeight<<endl;
+
+	loadMap(filePath);
+	printMap();
+
+}
+void Map::converImageToGrid()
+{
+	map.resize(mapHeight);
+	for(unsigned int i=0;i<mapHeight;i++)
+	{
+		map[i].resize(mapWidth);
+	}
+
+}
+
+void Map::loadMap(const char* filePath)
+{
+	converImageToGrid();
+	unsigned int j=0;
+	unsigned int k=0;
+	for (vector<unsigned char>::const_iterator i = image.begin(); i != image.end(); i+=4)
+	{
+		/*std::cout << (int)*i << ' '<<endl;*/
+
+		if(j == mapWidth)
+		{
+			j = 0;
+			k++;
+		}
+		if((int)*i == 0)
+		{
+
+			map[k][j] = true;
+
+		}
+		else
+		{
+			map[k][j] = false;
+
+		}
+		j++;
+
+	}
+
+
+
+}
+
+void Map::printMap() const
+{
+	ofstream myRoboticLab;
+	myRoboticLab.open ("myRoboticLab.txt");
+	cout<<mapHeight<<endl;
+	cout<<mapWidth<<endl;
+	for(unsigned int i=0;i<mapHeight;i++)
+	{
+		for(unsigned int k=0;k<mapWidth;k++)
+		{
+			if(map[k][i] == true)
+			{
+				myRoboticLab << "*";
+			}
+			else
+			{
+				myRoboticLab << " ";
+			}
+		}
+		myRoboticLab<<endl;
+
+
+	}
+	myRoboticLab.close();
+	cout<<map[mapWidth][mapHeight];
+	cout<<map[550][380];
+
+}
+
+Map::~Map() {
+	// TODO Auto-generated destructor stub
+}
+
