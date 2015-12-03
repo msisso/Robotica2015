@@ -1,6 +1,6 @@
-09:41:16 **** Incremental Build of configuration Debug for project HelloRobot ****
+10:10:44 **** Build of configuration Debug for project HelloRobot ****
 make all 
 make: Nothing to be done for `all'.
 
-09:41:16 Build Finished (took 57ms)
+10:10:44 Build Finished (took 63ms)
 

@@ -1609,3 +1609,9 @@ Finished building target: Mapping
 09:41:20 **** Incremental Build of configuration Debug for project Mapping ****
 make all 
 make: Nothing to be done for `all'.
+10:10:44 **** Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+10:10:44 **** Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
