@@ -6,12 +6,9 @@
 
 using namespace lodepng;
 
-Map::Map(float mapResolution, float robotSize) : mapResolution(mapResolution), robotSize(robotSize)
-{
-
-	robotSizeInCells = robotSize / mapResolution;
-	inflationRaduis = 0.3 * robotSizeInCells;
-	cout << "inflation raduis" << inflationRaduis << endl;
+Map::Map() {
+	// TODO Auto-generated constructor stub
+	map = {};
 }
 
 void Map::loadMapFromFile(const char* filePath)
@@ -20,7 +17,7 @@ void Map::loadMapFromFile(const char* filePath)
 	cout << "Map size: " << mapWidth << ", " << mapHeight << endl;
 
 	loadMap();
-//	printMap();
+	printMap();
 }
 
 void Map::converImageToGrid()
@@ -35,15 +32,15 @@ void Map::converImageToGrid()
 void Map::loadMap()
 {
 	converImageToGrid();
+	unsigned int j = 0;
+	unsigned int k = 0;
 
-
-	for (unsigned int i = 0; i < mapHeight; i++) {
-		for (unsigned int j = 0; j < mapWidth; j++) {
+	for (int i = 0; i < mapHeight; i++) {
+		for (int j = 0; j < mapWidth; j++) {
 			/*cout << "this is i: "<< i<< "and this is j: " << j << endl;*/
 			map[i][j] = checkIfCellIsOccupied(i, j);
 		}
 	}
-	inflateObstacles();
 
 }
 
@@ -58,43 +55,7 @@ bool Map::checkIfCellIsOccupied(int i, int j) {
 	return false;
 }
 
-void Map::inflateObstacles()
-{
-	vector<vector<bool> > inflatbleMap;
-	inflatbleMap.resize(mapHeight);
-	for (unsigned int i = 0; i<mapHeight; i++)
-	{
-		inflatbleMap[i].resize(mapWidth);
-	}
-
-
-	for (unsigned int i = 0; i < mapHeight; i++)
-	{
-		for (unsigned int j = 0; j < mapWidth; j++)
-		{
-			if (map[i][j])
-			{
-
-				for (unsigned a = (i - inflationRaduis); a < (i + inflationRaduis); a++)
-				{
-					for (unsigned b = (j - inflationRaduis); b < (j + inflationRaduis); b++)
-					{
-						if ((a >= 0 && a < mapHeight) && (b >= 0 && b < mapWidth))
-						{
-							inflatbleMap[a][b] = true;
-						}
-
-					}
-				}
-			}
-
-		}
-	}
-	printMap(inflatbleMap);
-
-}
-
-void Map::printMap(vector<vector<bool> > map) const
+void Map::printMap() const
 {
 	ofstream myRoboticLab;
 	myRoboticLab.open("myRoboticLab.txt");
@@ -115,8 +76,11 @@ void Map::printMap(vector<vector<bool> > map) const
 			}
 		}
 		myRoboticLab << endl;
+
+
 	}
 	myRoboticLab.close();
+
 }
 
 Map::~Map() {

@@ -10,7 +10,7 @@
 
 int main()
 {
-	Map m = Map(0.02,0.45);
+	Map m;
 	const char* FILEPATH = "roboticLabMap.png";
 
 	m.loadMapFromFile(FILEPATH);

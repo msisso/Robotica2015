@@ -67,7 +67,10 @@ int main() {
 				else if(iPosition > 333){
 					pp.SetSpeed(0, -0.5);
 				}
-
+				else
+				{
+					pp.SetSpeed(0, 0.5);
+				}
 
 			}
 

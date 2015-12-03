@@ -17,20 +17,14 @@ private:
 	unsigned int mapHeight;
 	vector<unsigned char> image;
 	vector<vector<bool> > map;
-	float mapResolution;
-	float robotSize;
-	int robotSizeInCells;
-	int inflationRaduis;
-
 	void converImageToGrid();
 	void loadMap();
 	bool checkIfCellIsOccupied(int i, int j);
 public:
-	Map(float mapResolution, float robotSize);
+	Map();
 	void loadMapFromFile(const char* flePath);
-	void printMap(vector<vector<bool> > map) const;
-	void inflateObstacles();
 
+	void printMap() const;
 	virtual ~Map();
 };
 

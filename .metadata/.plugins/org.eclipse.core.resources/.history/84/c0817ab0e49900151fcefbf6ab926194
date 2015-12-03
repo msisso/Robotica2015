@@ -35,10 +35,11 @@ void Map::converImageToGrid()
 void Map::loadMap()
 {
 	converImageToGrid();
+	unsigned int j = 0;
+	unsigned int k = 0;
 
-
-	for (unsigned int i = 0; i < mapHeight; i++) {
-		for (unsigned int j = 0; j < mapWidth; j++) {
+	for (int i = 0; i < mapHeight; i++) {
+		for (int j = 0; j < mapWidth; j++) {
 			/*cout << "this is i: "<< i<< "and this is j: " << j << endl;*/
 			map[i][j] = checkIfCellIsOccupied(i, j);
 		}
@@ -74,7 +75,10 @@ void Map::inflateObstacles()
 		{
 			if (map[i][j])
 			{
-
+				int tempHieght = 0;
+				int tempWidth = 0;
+				tempHieght = (2 * inflationRaduis) + 1;
+				tempWidth = (2 * inflationRaduis) + 1;
 				for (unsigned a = (i - inflationRaduis); a < (i + inflationRaduis); a++)
 				{
 					for (unsigned b = (j - inflationRaduis); b < (j + inflationRaduis); b++)
@@ -94,7 +98,7 @@ void Map::inflateObstacles()
 
 }
 
-void Map::printMap(vector<vector<bool> > map) const
+void Map::printMap(vector<vector<bool>> map) const
 {
 	ofstream myRoboticLab;
 	myRoboticLab.open("myRoboticLab.txt");

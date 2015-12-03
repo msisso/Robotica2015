@@ -28,7 +28,7 @@ private:
 public:
 	Map(float mapResolution, float robotSize);
 	void loadMapFromFile(const char* flePath);
-	void printMap(vector<vector<bool> > map) const;
+	void printMap(vector<vector<bool>> map) const;
 	void inflateObstacles();
 
 	virtual ~Map();

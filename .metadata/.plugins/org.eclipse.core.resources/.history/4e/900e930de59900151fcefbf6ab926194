@@ -74,7 +74,10 @@ void Map::inflateObstacles()
 		{
 			if (map[i][j])
 			{
-
+				int tempHieght = 0;
+				int tempWidth = 0;
+				tempHieght = (2 * inflationRaduis) + 1;
+				tempWidth = (2 * inflationRaduis) + 1;
 				for (unsigned a = (i - inflationRaduis); a < (i + inflationRaduis); a++)
 				{
 					for (unsigned b = (j - inflationRaduis); b < (j + inflationRaduis); b++)

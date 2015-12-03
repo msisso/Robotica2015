@@ -1421,3 +1421,191 @@ Finished building target: Mapping
 13:16:40 **** Build of configuration Debug for project Mapping ****
 make all 
 make: Nothing to be done for `all'.
+03:32:33 **** Build of configuration Debug for project HelloRobot ****
+make all 
+Building file: ../main.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/local/include/player-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+In file included from ../main.cpp:9:0:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h: In member function ‘void PlayerCc::Position2dProxy::GoTo(double, double, double)’:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aX’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aY’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aYaw’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h: In member function ‘void PlayerCc::Position3dProxy::GoTo(double, double, double, double, double, double)’:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aX’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aY’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aZ’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aRoll’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aPitch’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aYaw’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+Finished building: ../main.cpp
+ 
+Building target: HelloRobot
+Invoking: Cross G++ Linker
+g++ -L/usr/local/lib -o "HelloRobot"  ./main.o   -lplayerc++
+Finished building target: HelloRobot
+ 
+09:37:07 **** Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+In file included from ../Main.cpp:8:0:
+../Map.h:31:34: error: ‘>>’ should be ‘> >’ within a nested template argument list
+make: *** [Main.o] Error 1
+09:38:20 **** Build of configuration Debug for project HelloRobot ****
+make all 
+Building file: ../main.cpp
+Invoking: Cross G++ Compiler
+g++ -I/usr/local/include/player-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+In file included from ../main.cpp:9:0:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h: In member function ‘void PlayerCc::Position2dProxy::GoTo(double, double, double)’:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aX’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aY’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1615:40: warning: narrowing conversion of ‘aYaw’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h: In member function ‘void PlayerCc::Position3dProxy::GoTo(double, double, double, double, double, double)’:
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aX’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aY’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aZ’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aRoll’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aPitch’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+/usr/local/include/player-2.0/libplayerc++/playerc++.h:1785:59: warning: narrowing conversion of ‘aYaw’ from ‘double’ to ‘float’ inside { } is ill-formed in C++11 [-Wnarrowing]
+Finished building: ../main.cpp
+ 
+Building target: HelloRobot
+Invoking: Cross G++ Linker
+g++ -L/usr/local/lib -o "HelloRobot"  ./main.o   -lplayerc++
+Finished building target: HelloRobot
+ 
+09:38:21 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Main.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Main.d" -MT"Main.d" -o "Main.o" "../Main.cpp"
+Finished building: ../Main.cpp
+ 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::loadMap()’:
+../Map.cpp:41:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:42:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:38:15: warning: unused variable ‘j’ [-Wunused-variable]
+../Map.cpp:39:15: warning: unused variable ‘k’ [-Wunused-variable]
+../Map.cpp: In member function ‘void Map::inflateObstacles()’:
+../Map.cpp:78:9: warning: variable ‘tempHieght’ set but not used [-Wunused-but-set-variable]
+../Map.cpp:79:9: warning: variable ‘tempWidth’ set but not used [-Wunused-but-set-variable]
+../Map.cpp: At global scope:
+../Map.cpp:101:38: error: ‘>>’ should be ‘> >’ within a nested template argument list
+make: *** [Map.o] Error 1
+09:38:32 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+09:38:32 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::loadMap()’:
+../Map.cpp:41:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:42:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:38:15: warning: unused variable ‘j’ [-Wunused-variable]
+../Map.cpp:39:15: warning: unused variable ‘k’ [-Wunused-variable]
+../Map.cpp: In member function ‘void Map::inflateObstacles()’:
+../Map.cpp:78:9: warning: variable ‘tempHieght’ set but not used [-Wunused-but-set-variable]
+../Map.cpp:79:9: warning: variable ‘tempWidth’ set but not used [-Wunused-but-set-variable]
+../Map.cpp: At global scope:
+../Map.cpp:101:38: error: ‘>>’ should be ‘> >’ within a nested template argument list
+make: *** [Map.o] Error 1
+09:39:05 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+09:39:05 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::loadMap()’:
+../Map.cpp:41:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:42:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:38:15: warning: unused variable ‘j’ [-Wunused-variable]
+../Map.cpp:39:15: warning: unused variable ‘k’ [-Wunused-variable]
+../Map.cpp: In member function ‘void Map::inflateObstacles()’:
+../Map.cpp:78:9: warning: variable ‘tempHieght’ set but not used [-Wunused-but-set-variable]
+../Map.cpp:79:9: warning: variable ‘tempWidth’ set but not used [-Wunused-but-set-variable]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:39:58 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+09:39:58 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::loadMap()’:
+../Map.cpp:40:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp:41:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../Map.cpp: In member function ‘void Map::inflateObstacles()’:
+../Map.cpp:77:9: warning: variable ‘tempHieght’ set but not used [-Wunused-but-set-variable]
+../Map.cpp:78:9: warning: variable ‘tempWidth’ set but not used [-Wunused-but-set-variable]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:40:34 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+09:40:35 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+09:40:35 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+09:40:35 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
+09:40:43 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+09:40:43 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+../Map.cpp: In member function ‘void Map::inflateObstacles()’:
+../Map.cpp:77:9: warning: variable ‘tempHieght’ set but not used [-Wunused-but-set-variable]
+../Map.cpp:78:9: warning: variable ‘tempWidth’ set but not used [-Wunused-but-set-variable]
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:41:16 **** Incremental Build of configuration Debug for project HelloRobot ****
+make all 
+make: Nothing to be done for `all'.
+09:41:16 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+Building file: ../Map.cpp
+Invoking: Cross G++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Map.d" -MT"Map.d" -o "Map.o" "../Map.cpp"
+Finished building: ../Map.cpp
+ 
+Building target: Mapping
+Invoking: Cross G++ Linker
+g++  -o "Mapping"  ./Main.o ./Map.o ./lodepng.o   
+Finished building target: Mapping
+ 
+09:41:20 **** Incremental Build of configuration Debug for project Mapping ****
+make all 
+make: Nothing to be done for `all'.
