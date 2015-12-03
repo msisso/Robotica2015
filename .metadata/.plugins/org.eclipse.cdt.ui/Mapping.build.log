@@ -1,6 +1,6 @@
-10:10:44 **** Build of configuration Debug for project Mapping ****
+10:38:35 **** Incremental Build of configuration Debug for project Mapping ****
 make all 
 make: Nothing to be done for `all'.
 
-10:10:44 Build Finished (took 55ms)
+10:38:35 Build Finished (took 56ms)
 

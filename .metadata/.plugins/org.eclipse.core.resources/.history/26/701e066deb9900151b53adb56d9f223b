@@ -1,0 +1,110 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Jan 10, 2015
+ *      Author: colman
+ */
+
+#include <iostream>
+#include <libplayerc++/playerc++.h>
+#include <cmath>
+
+using namespace std;
+using namespace PlayerCc;
+
+#define LASER_SAMPLES 666
+#define MIN_ANGLE_FOR_AVOIDANCE -45
+#define MAX_ANGLE_FOR_AVOIDANCE 45
+#define MAX_DIST_TO_OBSTACLE 0.5
+#define distance 4.095
+
+
+int deg_to_index(double deg)
+
+{
+		return (deg + 120) / 0.36;
+}
+
+double index_to_deg(int i)
+{
+	return ((-120 + i*0.36)*(M_PI/180));
+}
+
+
+
+int main() {
+
+	PlayerClient pc("localhost", 6665);
+	Position2dProxy pp(&pc,0);
+	LaserProxy lp(&pc, 0);
+	pp.SetOdometry(5.91,3.11,436.38);
+
+	pp.SetMotorEnable(true);
+	//pp.SetOdometry(0.0,0.0,0.0);
+	while (true) {
+		pc.Read();
+			bool isObstacleInFront = false;
+			int minIndex = deg_to_index(MIN_ANGLE_FOR_AVOIDANCE);
+			int maxIndex = deg_to_index(MAX_ANGLE_FOR_AVOIDANCE);
+			int iPosition = 0;
+			bool turnAround = false;
+
+
+			for (int i = minIndex; i <= maxIndex; i++)
+			{
+				if (lp[i] < MAX_DIST_TO_OBSTACLE)
+				{
+					isObstacleInFront = true;
+					iPosition = i;
+					break;
+				}
+			}
+
+
+			if (isObstacleInFront)
+			{
+				for (int i = iPosition; i <= maxIndex; i++)
+				{
+					if(lp[iPosition] > lp[i])
+					{
+						iPosition = i;
+					}
+				}
+				if(iPosition < 333)
+				{
+					turnAround = true;
+					pp.SetSpeed(0, 0.5);
+				}
+				else if(iPosition > 333){
+					turnAround = true;
+					pp.SetSpeed(0, -0.5);
+				}
+
+
+			}
+			else
+			{
+				turnAround = false;
+				pp.SetSpeed(0.5, 0);
+
+			}
+
+
+			double xrobot = pp.GetXPos();
+			double yrobot = pp.GetYPos();
+
+			for(int i=0; i< LASER_SAMPLES; i++)
+			{
+				double xobs = xrobot + lp[i]*cos(pp.GetYaw() + index_to_deg(i));
+				double yobs = yrobot + lp[i]*sin(pp.GetYaw() + index_to_deg(i));
+				if(lp[i] < distance)
+				{
+					cout<< "x = " << xobs << "\n";
+					cout<< "y = " << yobs << "\n";
+				}
+			}
+	}
+	return 0;
+}
+
+
